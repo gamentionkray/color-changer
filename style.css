@@ -1,0 +1,80 @@
+:root {
+  --theme-color1: #f38f3d;
+  --theme-color2: #3df358;
+}
+
+form {
+  width: 50%;
+}
+
+.theme-primary-text {
+  color: var(--theme-color1);
+}
+
+.theme-primary-bg {
+  background-color: var(--theme-color1);
+}
+
+.theme-bg {
+  background-image: linear-gradient(
+    90deg,
+    var(--theme-color1),
+    var(--theme-color2)
+  );
+}
+
+.btn:hover {
+  filter: brightness(85%);
+}
+
+.card-shiny {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.floating-palette {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 40px;
+  z-index: 100;
+}
+
+.floating-palette-left {
+  left: 40px;
+}
+
+.floating-palette-right {
+  right: 40px;
+}
+
+.color_text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+input[type="color"] {
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 50%;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  form {
+    width: 100%;
+  }
+
+  .floating-palette {
+    bottom: 10px;
+  }
+}
